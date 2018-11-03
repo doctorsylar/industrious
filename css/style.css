@@ -1,0 +1,135 @@
+html, body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 2500px;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+/* HEADER */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    z-index: 5;
+    transition: background-color 0.3s linear;
+}
+header .logo {
+    color: #c8c8c8;
+    font-size: 18px;
+}
+header .logo a {
+    color: inherit;
+}
+header .logo a:hover span {
+    color: inherit;
+}
+header .logo a span {
+    font-size: 22px;
+    color: #ffffff;
+}
+header .menu-toggler {
+    font-size: 24px;
+    /*color: #ffffff;*/
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.1s;
+}
+header .menu-toggler:hover {
+    opacity: 1;
+}
+header .menu-toggler span {
+    font-size: 20px;
+    display: none;
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(280px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(280px);
+    }
+}
+@keyframes slideInTop {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+header nav {
+    transform: translateX(280px);
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-height: 100vh;
+    width: 280px;
+    background-color: #000000f4;
+    color: #ffffff;
+}
+header nav.show {
+    animation: slideInRight 0.2s linear 1 forwards;
+}
+header nav.unshow {
+    animation: slideOutRight 0.15s linear 1 forwards;
+}
+header nav h3.menu-closer {
+    margin: 5px;
+    text-align: right;
+    cursor: pointer;
+}
+header nav .menu-list {
+    list-style: none;
+    padding: 0 0 0 30px;
+}
+header nav .menu-list .menu-item a {
+    display: inline-block;
+    width: 90%;
+    text-transform: uppercase;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #888888;
+    border-bottom: 1px solid #ffffff;
+}
+header nav .menu-list .menu-item a:hover {
+    color: #ffffff;
+}
+
+/* MEDIA */
+/* MEDIA */
+/* MEDIA */
+@media screen and (min-width: 576px) {
+    header {
+        padding: 15px 20px;
+    }
+    header nav h3.menu-closer {
+        margin: 20px 30px 15px 20px;
+    }
+    header .menu-toggler span {
+        display: inline;
+    }
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 1200px) {
+}
