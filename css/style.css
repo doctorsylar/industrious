@@ -220,7 +220,7 @@ header nav .menu-list .menu-item a:hover {
 }
 /* MAIN */
 main {
-    background: url("/img/bg.jpg") fixed no-repeat;
+    background: url("../img/bg.jpg") fixed no-repeat;
     background-size: cover;
 }
 .main-area {
