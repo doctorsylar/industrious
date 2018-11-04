@@ -112,7 +112,83 @@ header nav .menu-list .menu-item a {
 header nav .menu-list .menu-item a:hover {
     color: #ffffff;
 }
+/* VIDEO BANNER */
+.banner {
+    background: url("../img/bg.jpg") top center no-repeat;
+    background-size: cover;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #ffffff7f;
+    width: 100%;
+}
+.banner .inner {
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 1;
+    position: relative;
+    z-index: 3;
+}
+.banner video {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+}
+.banner:before {
+    transition: opacity 3s ease;
+    transition-delay: 1.25s;
+    background: #111111;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.banner:after {
+    background: linear-gradient(135deg, #ce1b28 0%, #111111 74%);
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
 
+
+
+
+footer {
+    padding: 80px 0 60px;
+    background-color: #333333;
+}
+footer .copyright {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 30px;
+}
+footer .copyright span {
+    opacity: 0.4;
+
+}
+footer .copyright a {
+    border-bottom: 1px dotted #ff641e;
+    color: #ff641e;
+    transition: 0.4s all;
+}
+footer .copyright a:hover {
+    color: #ffffff;
+    border-bottom: none;
+}
 /* MEDIA */
 /* MEDIA */
 /* MEDIA */
