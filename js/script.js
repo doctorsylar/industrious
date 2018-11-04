@@ -19,7 +19,7 @@ $(function () {
             });
         }
         else if ($('header').css('position') === 'fixed' && scrollPos <= bannerHeight) {
-            $('header').fadeOut(350, 'linear', function () {
+            $('header').fadeOut(200, 'linear', function () {
                 let header = $('header');
                 header.css({
                     position: 'absolute',
@@ -27,7 +27,9 @@ $(function () {
                     backgroundColor: 'transparent',
                     animation: 'none'
                 });
-                header.fadeIn(100);
+                setTimeout(function () {
+                    header.fadeIn(200);
+                }, 100)
             });
         }
     });
@@ -35,13 +37,15 @@ $(function () {
 //    toggleMenu
     $('.menu-toggler').click(function () {
         $('header > nav').addClass('show');
-        $('header > nav').removeClass('unshow');
         $('.menu-toggler').fadeOut(200);
     });
     $('header .menu-closer').click(function () {
         $('header > nav').removeClass('show');
         $('header > nav').addClass('unshow');
         $('.menu-toggler').fadeIn(600);
+        setTimeout(function () {
+            $('header > nav').removeClass('unshow');
+        }, 600);
     });
 
     // anchor links slow scroll
