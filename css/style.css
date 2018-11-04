@@ -19,7 +19,7 @@ a {
     color: #ffffff;
 }
 h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 h2 {
     font-size: 2.5rem;
@@ -133,6 +133,14 @@ header nav .menu-list .menu-item a:hover {
     color: #ffffff;
 }
 /* VIDEO BANNER */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .banner {
     background: url("../img/banner.jpg") top center no-repeat;
     background-size: cover;
@@ -147,17 +155,19 @@ header nav .menu-list .menu-item a:hover {
 }
 .banner .inner {
     transition: opacity 1s ease, transform 1s ease;
-    opacity: 1;
+    opacity: 0;
     position: relative;
     z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: fadeIn 1.5s linear forwards ;
 }
 .banner .inner h1 {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: normal;
+    margin-bottom: 20px;
 }
 .banner .inner p {
     font-size: 1.2rem;
@@ -179,6 +189,8 @@ header nav .menu-list .menu-item a:hover {
     min-width: 100%;
     top: -50%;
     display: none;
+    opacity: 0;
+    animation: fadeIn 1.5s linear 1.5s forwards ;
 }
 .banner:before {
     transition: opacity 3s ease;
@@ -226,8 +238,36 @@ main {
 .main-area .main-text > p {
     margin-bottom: 30px;
 }
+/* CARDS */
+.main-area .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+.main-area .card-item {
+    text-align: center;
+    padding: 2rem;
+}
+.main-area .card-item .card-inner {
+    background-color: #ffffff;
+}
+.main-area .card-item .card-img {
+    font-size: 5rem;
+    padding: 50px 0 30px;
 
-
+}
+.main-area .card-item .card-img a {
+    color: #b61a25;
+}
+.main-area .card-item .card-text {
+    padding: 2rem;
+}
+.main-area .card-item .card-text > h3 {
+    margin-bottom: 25px;
+}
+.main-area .card-item .card-text > p {
+}
 
 footer {
     padding: 80px 0 60px;
