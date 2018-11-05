@@ -30,6 +30,37 @@ h3 {
 h4 {
     font-size: 1.5rem;
 }
+section h2 {
+    text-transform: uppercase;
+}
+.wrapper {
+    padding: 3rem 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+@media screen and (min-width: 576px) {
+    .wrapper {
+        padding: 4rem 0 3rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .wrapper {
+        padding: 5rem 0 4rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .wrapper {
+        padding: 6rem 0 5rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        padding: 8rem 0 6rem;
+    }
+}
+
+
+
 /* HEADER */
 header {
     width: 100%;
@@ -228,11 +259,8 @@ main {
 }
 .main-area .main-text {
     margin: 0 auto;
-    padding: 100px 1rem 50px;
+    /*padding: 100px 1rem 50px;*/
     text-align: center;
-}
-.main-area .main-text h2 {
-    text-transform: uppercase;
 }
 .main-area .main-text > h2,
 .main-area .main-text > p {
@@ -268,7 +296,80 @@ main {
 }
 .main-area .card-item .card-text > p {
 }
-
+/* DIVIDER */
+.divider {
+    background-color: #ce1b28;
+    color: #ffffffcc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(255, 64, 48, 0.10), rgba(255, 64, 48, 0.05)), url('../img/cta01.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+.divider .inner {
+    width: 95%;
+    margin: 0 auto;
+}
+.divider h2 {
+    margin-bottom: 30px;
+}
+.divider p {
+    line-height: 1.5rem;
+}
+/* QUOTES SECTION */
+.quotes {
+    background-color: #ffffffee;
+}
+.quotes .inner-text {
+    max-width: 1100px;
+    padding: 0 20px 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+.quotes .inner-text h2 {
+    margin-bottom: 30px;
+}
+.quotes .quotes-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.quotes .quotes-container .quote-item {
+    padding: 20px;
+}
+.quotes .quotes-container .quote-item .inner {
+    background-color: #ffffff;
+    padding: 30px;
+}
+.quotes .quotes-container .quote-item .inner .text {
+    border-left: 8px solid #bbbbbb;
+    margin-bottom: 15px;
+    padding: 20px 0 20px 30px;
+    font-style: italic;
+    line-height: 1.5rem;
+}
+.quotes .quotes-container .quote-item .inner .signature {
+    display: flex;
+    align-items: center;
+}
+.quotes .quotes-container .quote-item .inner .signature .image {
+    margin-right: 15px;
+}
+.quotes .quotes-container .quote-item .inner .signature .image img {
+    border-radius: 50%;
+    min-width: 45px;
+    max-width: 105px;
+    width: 80%;
+}
+.quotes .quotes-container .quote-item .inner .signature .sign-name .name {
+    font-weight: bold;
+    color: red;
+}
+/* FOOTER */
 footer {
     padding: 80px 0 60px;
     background-color: #333333;
@@ -310,10 +411,18 @@ footer .copyright a:hover {
     .banner .inner p {
         display: inline;
     }
+    .divider .inner {
+        width: 85%;
+        margin: 0 auto;
+    }
 }
 @media screen and (min-width: 768px) {
     html {
         font-size: 15px;
+    }
+    .divider .inner {
+        width: 75%;
+        margin: 0 auto;
     }
 }
 @media screen and (min-width: 992px) {
@@ -323,6 +432,14 @@ footer .copyright a:hover {
     .banner video {
         display: block;
     }
+    .divider .inner {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 @media screen and (min-width: 1200px) {
+    .divider .inner {
+        width: 65%;
+        margin: 0 auto;
+    }
 }
