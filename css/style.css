@@ -380,8 +380,9 @@ footer {
 footer .footer-inner {
     padding-bottom: 20px;
     border-bottom: 1px solid #888888;
-    line-height: 1.2rem;
-
+}
+footer .footer-inner .footer-text p {
+    line-height: 1.4rem;
 }
 footer .footer-inner a {
     color: inherit;
@@ -397,14 +398,14 @@ footer .footer-inner .socials a:hover span{
     transition: color 0.2s linear;
 }
 footer .footer-inner .footer-links li {
-    padding: 10px 0;
+    padding: 14px 0;
     border-bottom: 1px solid #888888;
 }
 footer .footer-inner .footer-links li:last-child {
     border-bottom: none;
 }
 footer .footer-inner .socials li {
-    padding: 6px 0;
+    padding: 5px 0;
 }
 footer .footer-inner .socials li i {
     display: inline-block;
